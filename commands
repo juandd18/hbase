@@ -35,4 +35,6 @@ drop 'table'
 //create one table with two columns families
 create 'user_new',{NAME=>'cf1',VERSIONS=>3},{NAME=>'cf2',VERSIONS=>1}
 
+//muestra la descripcion de una tabla
+describe 'user_new'
 
