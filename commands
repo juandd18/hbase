@@ -26,5 +26,13 @@ create 'table',{NAME=>'cf1',VERSIONS=>3}
 put 'tabla','a','cf1:name','first'
 put 'tabla','a','cf1:name','second'
 
+//get two version of the row key 'a'
 get 'tabla','a',{COLUMN=>'cf1',VERSIONS=>2}
+
+disable 'table'
+drop 'table'
+
+//create one table with two columns families
+create 'user_new',{NAME=>'cf1',VERSIONS=>3},{NAME=>'cf2',VERSIONS=>1}
+
 
