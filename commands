@@ -5,6 +5,8 @@ create 'table','familycolumnname'
 //insert into table
 put 'table','rowkey','familycolumnname:namecolumn','value'
 
+//hbase guarda filas ordenando por el rowkey
+
 //get data for a specify key
 get 'table','rowkey'
 
