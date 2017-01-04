@@ -1,0 +1,9 @@
+
+
+create 'table','familycolumnname'
+
+put 'table','rowkey','familycolumnname:namecolumn','value'
+
+get 'table','rowkey'
+
+scan 'table'
