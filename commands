@@ -15,3 +15,16 @@ scan 'table'
 
 //limit the result of the output
 scan 'table', LIMIT=>1
+
+//para borrar una tabla primero
+disable 'table'
+drop 'table'
+
+//crea una tabla con versionamiento
+create 'table',{NAME=>'cf1',VERSIONS=>3}
+
+put 'tabla','a','cf1:name','first'
+put 'tabla','a','cf1:name','second'
+
+get 'tabla','a',{COLUMN=>'cf1',VERSIONS=>2}
+
