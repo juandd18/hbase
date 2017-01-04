@@ -2,8 +2,14 @@
 
 create 'table','familycolumnname'
 
+//insert into table
 put 'table','rowkey','familycolumnname:namecolumn','value'
 
+//get data for a specify key
 get 'table','rowkey'
 
+// take all the table
 scan 'table'
+
+//limit the result of the output
+scan 'table', LIMIT=>1
