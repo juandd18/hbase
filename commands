@@ -1,4 +1,14 @@
+//create namespace (parecido a una base de datos (contiene tablas)
+create_namespace 'namespacename'
 
+//create table for namespace
+create 'namespace:tablename','columnfamilyname'
+
+//get namespaces
+list_namespace
+
+//get tables of a namespace
+list_namespace_tables 'namespacename'
 
 create 'table','familycolumnname'
 
@@ -20,8 +30,8 @@ scan 'table', LIMIT=>1
 disable 'table'
 drop 'table'
 
-//crea una tabla con versionamiento
-create 'table',{NAME=>'cf1',VERSIONS=>3}
+//crea una tabla con versionamiento PUEDEN SER MAS DE 3, 3 POR DEFECTO
+create 'table',{NAME=>'cf1',VERSIONS=>100}
 
 put 'tabla','a','cf1:name','first'
 put 'tabla','a','cf1:name','second'
